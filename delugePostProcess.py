@@ -121,7 +121,7 @@ elif (category == categories[5]):
 if delete_dir:
     if os.path.exists(delete_dir):
         try:
-            os.rmdir(delete_dir)
+            os.removedirs(delete_dir)
             log.debug("Successfully removed tempoary directory %s." % delete_dir)
         except:
             log.exception("Unable to delete temporary directory.")
